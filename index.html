@@ -104,7 +104,7 @@ const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(n
 const defaultUrl = languageCode === 'en' ? "https://www.aliexpress.com/item/" + decimalItemId + ".html" : "https://" + languageCode + ".aliexpress.com/item/" + text + ".html";
 
 const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
-
+console.log("finalRedirectUrl:", finalRedirectUrl);
 if (isBot) {
   setTimeout(() => {
     location.href = finalRedirectUrl;
