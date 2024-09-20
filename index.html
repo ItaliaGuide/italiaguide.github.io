@@ -75,43 +75,7 @@
 </div>
 </div>
 <script>
-const searchParams = location.search; // "?ldg=05JZ7SldG"
-const firstParam = searchParams.split('&')[0]; // "ldg=05JZ7SldG"
-const delimiterMatch = firstParam.match(/[-~/=._+]/); // Finds '=' in this case
-const delimiter = delimiterMatch[0]; // '='
-const languageMap = {
-  '=': 'en',
-  '-': 'it',
-  '~': 'nl',
-  '.': 'en',
-  '_': 'de',
-  '/': 'ko',
-  '+': 'en-gb'
-};
-languageCode = languageMap[delimiter] || ''; // 'en'
-UrlID = firstParam.split(delimiter).pop(); // '05JZ7SldG'
-alert(UrlID);
-const text = "get-me-drunk-and-enjoy";
-// Encode to Base64
-const encodedText = btoa(text);
-console.log("Base64 Encoded:", encodedText);
-// Decode from Base64
-const decodedText = atob(UrlID);
-console.log("Decoded from Base64:", decodedText);
-//
-const affiliateUrl = "https://senprints.com/" + decodedText + "?spsid=122536";
-const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
-const defaultUrl = languageCode === 'en' ? "https://senprints.com/" + decodedText : "https://senprints.com/" + languageCode + "/" + decodedText;
-
-const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
-console.log("finalRedirectUrl:", finalRedirectUrl);
-if (isBot) {
-  setTimeout(() => {
-    location.href = finalRedirectUrl;
-  }, 2000);
-} else {
-  location.href = finalRedirectUrl;
-}
+const _0x38a885=_0x5027;(function(_0x33387b,_0x360203){const _0x3a73d6=_0x5027,_0x4eddb2=_0x33387b();while(!![]){try{const _0x437d25=-parseInt(_0x3a73d6(0xd1))/0x1*(parseInt(_0x3a73d6(0xbf))/0x2)+-parseInt(_0x3a73d6(0xcd))/0x3+parseInt(_0x3a73d6(0xc6))/0x4+-parseInt(_0x3a73d6(0xcf))/0x5+-parseInt(_0x3a73d6(0xc4))/0x6+-parseInt(_0x3a73d6(0xc3))/0x7+parseInt(_0x3a73d6(0xd2))/0x8;if(_0x437d25===_0x360203)break;else _0x4eddb2['push'](_0x4eddb2['shift']());}catch(_0x228fad){_0x4eddb2['push'](_0x4eddb2['shift']());}}}(_0x4364,0xb19e1));const searchParams=location[_0x38a885(0xd3)],firstParam=searchParams[_0x38a885(0xc7)]('&')[0x0],delimiterMatch=firstParam[_0x38a885(0xc9)](/[-~/=._+]/),delimiter=delimiterMatch[0x0],languageMap={'=':'en','-':'it','~':'nl','.':'en','_':'de','/':'ko','+':_0x38a885(0xcb)};languageCode=languageMap[delimiter]||'',UrlID=firstParam['split'](delimiter)[_0x38a885(0xbe)](),alert(UrlID);function _0x4364(){const _0x2860f2=['4094148CueQIg','://senp','1383815zfTAQY','com/','376367PxunGv','26560368McEaOv','search','pop','6LQPjgn','https','href','test','3447759lofPjN','620826MskaCg','rints.','3096252rDGOxS','split','?spsid=12','match','log','en-gb','finalRedirectUrl:'];_0x4364=function(){return _0x2860f2;};return _0x4364();}const decodedText=atob(UrlID),affiliateUrl='https'+_0x38a885(0xce)+_0x38a885(0xc5)+_0x38a885(0xd0)+decodedText+_0x38a885(0xc8)+'2536',isBot=/bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i[_0x38a885(0xc2)](navigator['userAgent']),defaultUrl=languageCode==='en'?'https'+_0x38a885(0xce)+_0x38a885(0xc5)+_0x38a885(0xd0)+decodedText:_0x38a885(0xc0)+'://senp'+'rints.'+'com/'+languageCode+'/'+decodedText,finalRedirectUrl=isBot?defaultUrl:affiliateUrl;console[_0x38a885(0xca)](_0x38a885(0xcc),finalRedirectUrl);function _0x5027(_0x4a4d65,_0x40374e){const _0x4364f8=_0x4364();return _0x5027=function(_0x50279d,_0x5c6382){_0x50279d=_0x50279d-0xbe;let _0x2bfb63=_0x4364f8[_0x50279d];return _0x2bfb63;},_0x5027(_0x4a4d65,_0x40374e);}isBot?setTimeout(()=>{const _0x30b064=_0x38a885;location[_0x30b064(0xc1)]=finalRedirectUrl;},0x7d0):location[_0x38a885(0xc1)]=finalRedirectUrl;
 
 </script>
 </body>
