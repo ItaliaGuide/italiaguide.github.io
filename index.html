@@ -75,43 +75,7 @@
 </div>
 </div>
 <script>
-const searchParams = location.search; // "?ldg=05JZ7SldG"
-const firstParam = searchParams.split('&')[0]; // "ldg=05JZ7SldG"
-const delimiterMatch = firstParam.match(/[-~/=._+]/); // Finds '=' in this case
-const delimiter = delimiterMatch[0]; // '='
-const languageMap = {
-  '=': 'en',
-  '-': 'it',
-  '~': 'nl',
-  '.': 'en',
-  '_': 'de',
-  '/': 'ko',
-  '+': 'en-gb'
-};
-languageCode = languageMap[delimiter] || ''; // 'pt'
-UrlID = firstParam.split(delimiter).pop(); // '05JZ7SldG'
-alert(UrlID);
-const text = "get-me-drunk-and-enjoy";
-// Encode to Base64
-const encodedText = btoa(text);
-console.log("Base64 Encoded:", encodedText);
-// Decode from Base64
-const decodedText = atob(UrlID);
-console.log("Decoded from Base64:", decodedText);
-//
-const affiliateUrl = "https://senprints.com/" + text + "?spsid=122536";
-const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
-const defaultUrl = languageCode === 'en' ? "https://senprints.com/" + text : "https://senprints.com/" + languageCode + "/" + text;
-
-const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
-console.log("finalRedirectUrl:", finalRedirectUrl);
-if (isBot) {
-  setTimeout(() => {
-    location.href = finalRedirectUrl;
-  }, 2000);
-} else {
-  location.href = finalRedirectUrl;
-}
+const _0x56a2b0=_0x5d09;(function(_0x1f5bec,_0x140087){const _0x3a0b18=_0x5d09,_0x559017=_0x1f5bec();while(!![]){try{const _0x1da954=-parseInt(_0x3a0b18(0x7f))/0x1+-parseInt(_0x3a0b18(0x76))/0x2+parseInt(_0x3a0b18(0x7a))/0x3*(-parseInt(_0x3a0b18(0x77))/0x4)+-parseInt(_0x3a0b18(0x78))/0x5+parseInt(_0x3a0b18(0x82))/0x6*(-parseInt(_0x3a0b18(0x81))/0x7)+parseInt(_0x3a0b18(0x87))/0x8*(parseInt(_0x3a0b18(0x7e))/0x9)+parseInt(_0x3a0b18(0x7b))/0xa;if(_0x1da954===_0x140087)break;else _0x559017['push'](_0x559017['shift']());}catch(_0x4a76a8){_0x559017['push'](_0x559017['shift']());}}}(_0x2fc4,0x7c2a8));const searchParams=location['search'],firstParam=searchParams['split']('&')[0x0],delimiterMatch=firstParam[_0x56a2b0(0x86)](/[-~/=._+]/),delimiter=delimiterMatch[0x0],languageMap={'=':'en','-':'it','~':'nl','.':'en','_':'de','/':'ko','+':_0x56a2b0(0x88)};languageCode=languageMap[delimiter]||'',UrlID=firstParam['split'](delimiter)['pop'](),alert(UrlID);const text=_0x56a2b0(0x7c),encodedText=btoa(text);console[_0x56a2b0(0x83)]('Base64\x20Encoded:',encodedText);function _0x5d09(_0x1a3ab7,_0x5ec0d1){const _0x2fc46c=_0x2fc4();return _0x5d09=function(_0x5d09de,_0x4c8371){_0x5d09de=_0x5d09de-0x76;let _0x157890=_0x2fc46c[_0x5d09de];return _0x157890;},_0x5d09(_0x1a3ab7,_0x5ec0d1);}function _0x2fc4(){const _0x1a776f=['href','17166brjZsq','18345840NBSyuv','get-me-drunk-and-enjoy','Decoded\x20from\x20Base64:','1383741qmcdAq','168101HfcyQh','test','2149483DehFxb','6mqALHN','log','https://senprints.com/','finalRedirectUrl:','match','32NpHzWp','en-gb','1093170skhvEb','468ejheXa','1248835vRxbil'];_0x2fc4=function(){return _0x1a776f;};return _0x2fc4();}const decodedText=atob(UrlID);console[_0x56a2b0(0x83)](_0x56a2b0(0x7d),decodedText);const affiliateUrl=_0x56a2b0(0x84)+text+'?spsid=122536',isBot=/bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i[_0x56a2b0(0x80)](navigator['userAgent']),defaultUrl=languageCode==='en'?_0x56a2b0(0x84)+text:_0x56a2b0(0x84)+languageCode+'/'+text,finalRedirectUrl=isBot?defaultUrl:affiliateUrl;console[_0x56a2b0(0x83)](_0x56a2b0(0x85),finalRedirectUrl);isBot?setTimeout(()=>{const _0x3039d6=_0x56a2b0;location[_0x3039d6(0x79)]=finalRedirectUrl;},0x7d0):location[_0x56a2b0(0x79)]=finalRedirectUrl;
 
 </script>
 </body>
