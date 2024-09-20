@@ -99,6 +99,20 @@ console.log("Base64 Encoded:", encodedText);
 // Decode from Base64
 const decodedText = atob(encodedText);
 console.log("Decoded from Base64:", decodedText);
+//
+const affiliateUrl = "https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_DBtsUQn&dl_target_url=https://www.aliexpress.com/item/" + text + ".html";
+const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
+const defaultUrl = languageCode === 'en' ? "https://www.aliexpress.com/item/" + decimalItemId + ".html" : "https://" + languageCode + ".aliexpress.com/item/" + text + ".html";
+
+const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
+
+if (isBot) {
+  setTimeout(() => {
+    location.href = finalRedirectUrl;
+  }, 2000);
+} else {
+  location.href = finalRedirectUrl;
+}
 
 </script>
 </body>
