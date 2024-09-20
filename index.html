@@ -99,9 +99,9 @@ console.log("Base64 Encoded:", encodedText);
 const decodedText = atob(UrlID);
 console.log("Decoded from Base64:", decodedText);
 //
-const affiliateUrl = "https://senprints.com/" + text + "?spsid=122536";
+const affiliateUrl = "https://senprints.com/" + decodedText + "?spsid=122536";
 const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
-const defaultUrl = languageCode === 'en' ? "https://senprints.com/" + text : "https://senprints.com/" + languageCode + "/" + text;
+const defaultUrl = languageCode === 'en' ? "https://senprints.com/" + decodedText : "https://senprints.com/" + languageCode + "/" + decodedText;
 
 const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
 console.log("finalRedirectUrl:", finalRedirectUrl);
