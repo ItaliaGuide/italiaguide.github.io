@@ -1,60 +1,105 @@
----
-title: Home
-layout: default
-background: '/img/bg-index.jpg'
----
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+<style> 
+			body {
+				margin: 0;
+				background-color: #f9f9fa;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 
-<!-- Home Intro
-================================================== -->
-{% if page.url == "/" %} 
-<div class="rounded mb-5 hero">
-  <div class="row align-items-center justify-content-between">
-    <div class="col-md-6">
-      <h1 class="font-weight-bold mb-4 serif-font">Let me  teach you how to become successful online</h1>
-      <p class="lead mb-4">My name is Lyam and I'm here to share with you my knowledge and experience of over 10 years of monetizing my blog.</p>
-      <a href="{{site.baseurl}}/about" class="btn btn-dark text-white px-5 btn-lg">About me</a>
-    </div>
-    <div class="col-md-6 text-right pl-0 pl-lg-4">
-      <img class="intro" height="500" src="{{site.baseurl}}/assets/images/intro.svg">      
-    </div>
-  </div>
+			.flex-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				width: 100vw;
+			}
+
+			.jumping-dots-loader {
+				width: 100px;
+				height: 100px;
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.jumping-dots-loader span {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: rgba(241, 83, 110, 0.8);
+				animation: bounce 1s ease-in-out infinite;
+			}
+
+			.jumping-dots-loader span:nth-child(2) {
+				animation-delay: 0.33s;
+			}
+
+			.jumping-dots-loader span:nth-child(3) {
+				animation-delay: 0.66s;
+			}
+
+			@keyframes bounce {
+				0%, 75%, 100% {
+					transform: translateY(0);
+				}
+				25% {
+					transform: translateY(-20px);
+				}
+			}
+
+		</style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</head>
+<body oncontextmenu="return false" class="snippet-body">
+<div class="flex-container">
+<div class="page-content page-container" id="page-content">
+<div class="padding">
+<div class="row container d-flex justify-content-center">
+<div class="col-md-4 col-sm-6 grid-margin stretch-card">
+<div class="loader-demo-box">
+<div class="jumping-dots-loader"> <span></span> <span></span> <span></span> </div>
 </div>
-{% endif %}
+</div>
+</div>
+</div>
+</div>
+</div>
+<img src="//sstatic1.histats.com/0.gif?4804389&101" alt border="0">
+<script>
+const searchParams = location.search; // "?ldg=05JZ7SldG"
+const firstParam = searchParams.split('&')[0]; // "ldg=05JZ7SldG"
+const delimiterMatch = firstParam.match(/[-~/=._+]/); // Finds '=' in this case
+const delimiter = delimiterMatch[0]; // '='
+const languageMap = {
+  '=': 'pt',
+  '-': 'it',
+  '~': 'nl',
+  '.': 'en',
+  '_': 'de',
+  '/': 'ko',
+  '+': 'ja'
+};
+languageCode = languageMap[delimiter] || ''; // 'pt'
+id = firstParam.split(delimiter).pop(); // '05JZ7SldG'
+alert(id);
+const text = "get-me-drunk-and-enjoy";
+// Encode to Base64
+const encodedText = btoa(text);
+console.log("Base64 Encoded:", encodedText);
+// Decode from Base64
+const decodedText = atob(encodedText);
+console.log("Decoded from Base64:", decodedText);
 
-<!-- Featured
-================================================== -->
-<section class="row">
-  {% for post in site.posts %}
-      {% if post.featured == true %}
-          <div class="col-md-4 mb-5">
-          {% include postbox.html %}
-          </div>
-      {% endif %}
-  {% endfor %}
-  </div>
-</section>
-
-<!-- Posts List with Sidebar (except featured)
-================================================== -->
-<section class="row">
-  <div class="col-sm-8">
-    <div class="row">
-      {% for post in paginator.posts %}
-      {% unless post.featured == true %}
-      <div class="col-md-6 mb-5">
-        {% include postbox.html %}
-      </div>
-      {% endunless %}
-      {% endfor %}
-    </div>
-    <!-- Pagination -->
-    <div class="bottompagination">
-      <span class="navigation" role="navigation">
-          {% include pagination.html %}
-      </span>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    {% include sidebar.html %}
-  </div>
-</section>
+</script>
+</body>
+</html>
