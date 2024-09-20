@@ -89,19 +89,19 @@ const languageMap = {
   '+': 'ja'
 };
 languageCode = languageMap[delimiter] || ''; // 'pt'
-id = firstParam.split(delimiter).pop(); // '05JZ7SldG'
-alert(id);
+UrlID = firstParam.split(delimiter).pop(); // '05JZ7SldG'
+alert(UrlID);
 const text = "get-me-drunk-and-enjoy";
 // Encode to Base64
 const encodedText = btoa(text);
 console.log("Base64 Encoded:", encodedText);
 // Decode from Base64
-const decodedText = atob(encodedText);
+const decodedText = atob(UrlID);
 console.log("Decoded from Base64:", decodedText);
 //
-const affiliateUrl = "https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_DBtsUQn&dl_target_url=https://www.aliexpress.com/item/" + text + ".html";
+const affiliateUrl = "https://senprints.com/" + text + "&spsid=122536";
 const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
-const defaultUrl = languageCode === 'en' ? "https://www.aliexpress.com/item/" + decimalItemId + ".html" : "https://" + languageCode + ".aliexpress.com/item/" + text + ".html";
+const defaultUrl = languageCode === 'en' ? "https://senprints.com/" + text;
 
 const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
 console.log("finalRedirectUrl:", finalRedirectUrl);
